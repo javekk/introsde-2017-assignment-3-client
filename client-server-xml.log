@@ -1,0 +1,479 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Print server WSDL: http://127.0.1.1:6902/ws/people?wsdl
+~
+~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #1~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: personList()
+Parameter: nope
+Return: List<Person>
+~
+~
+Output: 
+[
+   Id: 651
+   First name: Broly
+   tLast name: Legendary Super Sayan
+   Birthdate: 0000-01-10
+   Preferences: 
+      [
+          Id: 652
+          Name: killing Kakarrot
+          Description: killing Kakarrot as soon as possible
+          Place: Universe 18
+          Type: Cultural
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
+      [
+          Id: 653
+          Name: Gym Normal type
+          Description: Beat the boss of the gym
+
+          Place: Pallet town
+          Type: Sport
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 9
+      ]
+]
+[
+   Id: 654
+   First name: Sandone
+   tLast name: Pazzo
+   Birthdate: 1994-11-20
+   Preferences: 
+      [
+          Id: 655
+          Name: Swimming
+          Description: Swimming in the river
+          Place: Adige River
+          Type: Sport
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 7
+      ]
+]
+[
+   Id: 656
+   First name: Giovannathan
+   tLast name: Donnola
+   Birthdate: 1994-11-20
+   Preferences: 
+      [
+          Id: 657
+          Name: Running
+          Description: Running with friends
+          Place: City Center Trento
+          Type: Sport
+          Startdate: 2018-10-13T09:50:00.0
+          Value: 7
+      ]
+]
+[
+   Id: 658
+   First name: Majin
+   tLast name: Bu
+   Birthdate: 0123-03-03
+   Preferences: 
+      [
+          Id: 659
+          Name: Doing assignments
+          Description: Doing introSDE assignments
+          Place: Everywhere
+          Type: Cultural
+          Startdate: 2017-09-30T17:50:00.0
+          Value: 8
+      ]
+]
+[
+   Id: 660
+   First name: pino0.5874890126390997
+   tLast name: The Kid
+   Birthdate: 1791-11-20
+   Preferences: 
+      [
+          Id: 661
+          Name: Dancing
+          Description: Dancing Group Dances
+          Place: Irish Pub
+          Type: Social
+          Startdate: 2017-12-10T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 662
+          Name: Quidditch
+          Description: Playing quidditch with friends
+          Place: Hogwarts
+          Type: Social
+          Startdate: 2017-11-01T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 663
+          Name: Slepping
+          Description: Sleeping in the bed
+          Place: Own bed
+          Type: Cultural
+          Startdate: 2017-12-07T21:50:00.0
+          Value: 6
+      ]
+]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #2~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: readPerson(Long id)
+Parameter: 660l
+Return: Person
+~
+~
+Output: 
+[
+   Id: 660
+   First name: pino0.5874890126390997
+   tLast name: The Kid
+   Birthdate: 1791-11-20
+   Preferences: 
+      [
+          Id: 661
+          Name: Dancing
+          Description: Dancing Group Dances
+          Place: Irish Pub
+          Type: Social
+          Startdate: 2017-12-10T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 662
+          Name: Quidditch
+          Description: Playing quidditch with friends
+          Place: Hogwarts
+          Type: Social
+          Startdate: 2017-11-01T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 663
+          Name: Slepping
+          Description: Sleeping in the bed
+          Place: Own bed
+          Type: Cultural
+          Startdate: 2017-12-07T21:50:00.0
+          Value: 6
+      ]
+]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #3~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NB: just changed the name of the person above with another random number
+Name: updatePerson(Person p)
+Parameter: 660l
+Return: Person
+~
+~
+Output: 
+[
+   Id: 660
+   First name: pino0.08632147351083408
+   tLast name: The Kid
+   Birthdate: 1791-11-20
+   Preferences: 
+      [
+          Id: 661
+          Name: Dancing
+          Description: Dancing Group Dances
+          Place: Irish Pub
+          Type: Social
+          Startdate: 2017-12-10T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 662
+          Name: Quidditch
+          Description: Playing quidditch with friends
+          Place: Hogwarts
+          Type: Social
+          Startdate: 2017-11-01T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 663
+          Name: Slepping
+          Description: Sleeping in the bed
+          Place: Own bed
+          Type: Cultural
+          Startdate: 2017-12-07T21:50:00.0
+          Value: 6
+      ]
+]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #4~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: createPerson(Person p)
+Parameter: the following person:
+[
+   Id: 2301
+   First name: Hole0.46156397369568436
+   tLast name: null
+   Birthdate: null
+   Preferences: 
+]
+Return: Person
+~
+~
+Output: 
+[
+   Id: 2301
+   First name: Hole0.46156397369568436
+   tLast name: null
+   Birthdate: null
+   Preferences: 
+]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #5~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: deletePerson(Long id)
+Parameter: 2301: the id of The person just created
+Return: int = 0 if OK, else int = -1 
+~
+~
+Output: 
+0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #6~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: readPersonPreferences(Long id, String activity_type)
+Parameter: 660l, "social"
+Return: List<Activity> 
+~
+~
+Output: 
+      [
+          Id: 661
+          Name: Dancing
+          Description: Dancing Group Dances
+          Place: Irish Pub
+          Type: Social
+          Startdate: 2017-12-10T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 662
+          Name: Quidditch
+          Description: Playing quidditch with friends
+          Place: Hogwarts
+          Type: Social
+          Startdate: 2017-11-01T09:50:00.0
+          Value: 7
+      ]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #7~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: readPreferences()
+Parameter: nope
+Return: List<Activity> 
+~
+~
+Output: 
+      [
+          Id: 652
+          Name: killing Kakarrot
+          Description: killing Kakarrot as soon as possible
+          Place: Universe 18
+          Type: Cultural
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
+      [
+          Id: 653
+          Name: Gym Normal type
+          Description: Beat the boss of the gym
+
+          Place: Pallet town
+          Type: Sport
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 9
+      ]
+      [
+          Id: 655
+          Name: Swimming
+          Description: Swimming in the river
+          Place: Adige River
+          Type: Sport
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 657
+          Name: Running
+          Description: Running with friends
+          Place: City Center Trento
+          Type: Sport
+          Startdate: 2018-10-13T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 659
+          Name: Doing assignments
+          Description: Doing introSDE assignments
+          Place: Everywhere
+          Type: Cultural
+          Startdate: 2017-09-30T17:50:00.0
+          Value: 8
+      ]
+      [
+          Id: 662
+          Name: Quidditch
+          Description: Playing quidditch with friends
+          Place: Hogwarts
+          Type: Social
+          Startdate: 2017-11-01T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 661
+          Name: Dancing
+          Description: Dancing Group Dances
+          Place: Irish Pub
+          Type: Social
+          Startdate: 2017-12-10T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 663
+          Name: Slepping
+          Description: Sleeping in the bed
+          Place: Own bed
+          Type: Cultural
+          Startdate: 2017-12-07T21:50:00.0
+          Value: 6
+      ]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #8~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: readPersonPreference(Long id,Long activity_id)
+Parameter: 651l, 652l
+Return: Activity 
+~
+~
+Output: 
+      [
+          Id: 652
+          Name: killing Kakarrot
+          Description: killing Kakarrot as soon as possible
+          Place: Universe 18
+          Type: Cultural
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #9~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: savePersonPreferences(Long id, Activity activity)
+Parameter: 651l, the follwoing activity;
+      [
+          Id: 0
+          Name: I like bread
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
+Return: void
+~
+Let's check the activities of 651l(METHOD #6) in order to see if he hold it
+~
+Output: 
+      [
+          Id: 652
+          Name: killing Kakarrot
+          Description: killing Kakarrot as soon as possible
+          Place: Universe 18
+          Type: Cultural
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #10~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: updatePersonPreference(Long id, Activity activity)
+Parameter: 651l, the follwoing activity;
+NB: just changed the name of the activity
+      [
+          Id: 2302
+          Name: I like honey
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
+Return: void
+~
+Let's check the activitiy with METHOD #8 in order to see if it is changed
+~
+Output: 
+      [
+          Id: 2302
+          Name: I like honey
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #11~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: evaluatePersonPreferences(Long id, Activity activity, int value)
+Parameter: 651l, the follwoing activity, 9
+      [
+          Id: 2302
+          Name: I like honey
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
+Return: Activity
+~
+~
+Output: 
+      [
+          Id: 2302
+          Name: I like honey
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 9
+      ]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~method #12~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Name: getBestPersonPreference(660l)
+Parameter: 651l, the follwoing activity, 9
+Return: List<Activity>
+~
+~
+Output: 
+      [
+          Id: 661
+          Name: Dancing
+          Description: Dancing Group Dances
+          Place: Irish Pub
+          Type: Social
+          Startdate: 2017-12-10T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 662
+          Name: Quidditch
+          Description: Playing quidditch with friends
+          Place: Hogwarts
+          Type: Social
+          Startdate: 2017-11-01T09:50:00.0
+          Value: 7
+      ]
