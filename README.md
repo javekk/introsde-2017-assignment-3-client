@@ -3,7 +3,7 @@
 ## 1. Identification
 * Perini Raffaele 196339
 * raffaele.perini@studenti.unitn.it
-* __My Server URL__: https://introsdeass3.herokuapp.com/sdelab/
+* __My Server URL__: https://introsdeass3.herokuapp.com/ws/people?wsdl
 * __My Git Repo__: https://github.com/javekk/introsde-2017-assignment-3-server
 
 ## 2. Project
