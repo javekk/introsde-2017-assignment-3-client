@@ -1,5 +1,5 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Print server WSDL: http://127.0.1.1:6902/ws/people?wsdl
+Print server WSDL: https://introsdeass3.herokuapp.com/ws/people?wsdl
 ~
 ~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,6 +35,24 @@ Output:
           Type: Sport
           Startdate: 2017-12-28T08:50:00.0
           Value: 9
+      ]
+      [
+          Id: 2302
+          Name: I like honey
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 9
+      ]
+      [
+          Id: 2351
+          Name: I like bread
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
       ]
 ]
 [
@@ -87,7 +105,7 @@ Output:
 ]
 [
    Id: 660
-   First name: pino0.5874890126390997
+   First name: pino0.16176159247131539
    tLast name: The Kid
    Birthdate: 1791-11-20
    Preferences: 
@@ -130,7 +148,7 @@ Return: Person
 Output: 
 [
    Id: 660
-   First name: pino0.5874890126390997
+   First name: pino0.16176159247131539
    tLast name: The Kid
    Birthdate: 1791-11-20
    Preferences: 
@@ -167,14 +185,48 @@ Output:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 NB: just changed the name of the person above with another random number
 Name: updatePerson(Person p)
-Parameter: 660l
+Parameter: the following person
+[
+   Id: 660
+   First name: pino0.5841791657927348
+   tLast name: The Kid
+   Birthdate: 1791-11-20
+   Preferences: 
+      [
+          Id: 661
+          Name: Dancing
+          Description: Dancing Group Dances
+          Place: Irish Pub
+          Type: Social
+          Startdate: 2017-12-10T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 662
+          Name: Quidditch
+          Description: Playing quidditch with friends
+          Place: Hogwarts
+          Type: Social
+          Startdate: 2017-11-01T09:50:00.0
+          Value: 7
+      ]
+      [
+          Id: 663
+          Name: Slepping
+          Description: Sleeping in the bed
+          Place: Own bed
+          Type: Cultural
+          Startdate: 2017-12-07T21:50:00.0
+          Value: 6
+      ]
+]
 Return: Person
 ~
 ~
 Output: 
 [
    Id: 660
-   First name: pino0.08632147351083408
+   First name: pino0.5841791657927348
    tLast name: The Kid
    Birthdate: 1791-11-20
    Preferences: 
@@ -212,8 +264,8 @@ Output:
 Name: createPerson(Person p)
 Parameter: the following person:
 [
-   Id: 2301
-   First name: Hole0.46156397369568436
+   Id: 2552
+   First name: Hole0.09126397099455097
    tLast name: null
    Birthdate: null
    Preferences: 
@@ -223,8 +275,8 @@ Return: Person
 ~
 Output: 
 [
-   Id: 2301
-   First name: Hole0.46156397369568436
+   Id: 2552
+   First name: Hole0.09126397099455097
    tLast name: null
    Birthdate: null
    Preferences: 
@@ -233,7 +285,7 @@ Output:
 ~~~~~~~~~~~~~~~~~method #5~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Name: deletePerson(Long id)
-Parameter: 2301: the id of The person just created
+Parameter: 2552: the id of The person just created
 Return: int = 0 if OK, else int = -1 
 ~
 ~
@@ -348,6 +400,24 @@ Output:
           Startdate: 2017-12-07T21:50:00.0
           Value: 6
       ]
+      [
+          Id: 2302
+          Name: I like honey
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 9
+      ]
+      [
+          Id: 2351
+          Name: I like bread
+          Description: with marmalade and butter
+          Place: Povo 0
+          Type: eating pizza
+          Startdate: 2017-12-28T08:50:00.0
+          Value: 2
+      ]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~method #8~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -407,7 +477,7 @@ NB: just changed the name of the activity
           Place: Povo 0
           Type: eating pizza
           Startdate: 2017-12-28T08:50:00.0
-          Value: 2
+          Value: 9
       ]
 Return: void
 ~
@@ -421,7 +491,7 @@ Output:
           Place: Povo 0
           Type: eating pizza
           Startdate: 2017-12-28T08:50:00.0
-          Value: 2
+          Value: 9
       ]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~method #11~~~~~~~~~~~~~~~~~~~~~~
@@ -435,7 +505,7 @@ Parameter: 651l, the follwoing activity, 9
           Place: Povo 0
           Type: eating pizza
           Startdate: 2017-12-28T08:50:00.0
-          Value: 2
+          Value: 9
       ]
 Return: Activity
 ~
